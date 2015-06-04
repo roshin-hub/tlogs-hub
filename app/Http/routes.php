@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+//Route::get('/', 'WelcomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
@@ -20,9 +21,11 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('github/authorize', function() {
+
+
+/*Route::get('github/authorize', function() {
     return OAuth::authorize('github');
-});
+});*/
 
 /*Route::get('github/login', function() {
 
@@ -35,15 +38,21 @@ use \AdamWathan\EloquentOAuth\Exceptions\ApplicationRejectedException;
 use \AdamWathan\EloquentOAuth\Exceptions\InvalidAuthorizationCodeException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-Route::get('github/login', function() {
+
+
+Route::get('{provider}/authorize', function($provider) {
+    return  OAuth::authorize($provider);
+});
+
+Route::get('{provider}/login', function($provider) {
     try {
-        OAuth::login('github', function($user,$userDetails) {
+        OAuth::login($provider, function($user,$userDetails) {
 
-                /*$user->email = $userDetails->email;
+                $user->email = $userDetails->email;
                 $user->name = $userDetails->nickname;
-                $user->save();*/
+                $user->save();
 
-              dd($userDetails);
+              //dd($userDetails);
 
 
          });
@@ -64,7 +73,7 @@ Route::get('github/login', function() {
     return Redirect::intended('home');
 });
 
-Route::get('linkedin/authorize', function() {
+/*Route::get('linkedin/authorize', function() {
     return OAuth::authorize('linkedin');
 });
 
@@ -151,5 +160,7 @@ Route::get('twitter/login', function() {
     return "socialite twitter Done ::".$user->token;
 
 });
+
+*/
 
 

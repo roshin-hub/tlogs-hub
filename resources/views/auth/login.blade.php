@@ -113,7 +113,7 @@
                         .omb_login .omb_loginOr .omb_spanOr {
                             background-color: white;
                             display: block;
-                            left: 50%;
+                            left: 84%;
                             margin-left: -1.5em;
                             position: absolute;
                             text-align: center;
@@ -128,17 +128,18 @@
                             margin-top: 0 !important;
                         }
 
+
                     </style>
                     <div class="omb_login">
                         <div class="row omb_row-sm-offset-3 omb_socialButtons">
                             <div class="col-xs-4 col-sm-2">
-                                <a class="btn btn-lg btn-block omb_btn-facebook" href="#">
+                                <a class="btn btn-lg btn-block omb_btn-facebook" href="/linkedin/authorize">
                                     <i class="fa fa-facebook visible-xs"></i>
                                     <span class="hidden-xs">LinkedIn</span>
                                 </a>
                             </div>
                             <div class="col-xs-4 col-sm-2">
-                                <a class="btn btn-lg btn-block omb_btn-facebook" href="#">
+                                <a class="btn btn-lg btn-block omb_btn-facebook" href="/facebook/authorize">
                                     <i class="fa fa-facebook visible-xs"></i>
                                     <span class="hidden-xs">Facebook</span>
                                 </a>
@@ -150,13 +151,13 @@
                                 </a>
                             </div>
                             <div class="col-xs-4 col-sm-2">
-                                <a class="btn btn-lg btn-block omb_btn-twitter" href="#">
+                                <a class="btn btn-lg btn-block omb_btn-twitter" href="/github/authorize">
                                     <i class="fa fa-twitter visible-xs"></i>
                                     <span class="hidden-xs">GitHub</span>
                                 </a>
                             </div>
                             <div class="col-xs-4 col-sm-2">
-                                <a class="btn btn-lg btn-block omb_btn-google" href="#">
+                                <a class="btn btn-lg btn-block omb_btn-google" href="/google/authorize">
                                     <i class="fa fa-google-plus visible-xs"></i>
                                     <span class="hidden-xs">Google+</span>
                                 </a>
@@ -164,7 +165,7 @@
                         </div>
 
                         <div class="row omb_row-sm-offset-3 omb_loginOr">
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-sm-6" >
                                 <hr class="omb_hrOr">
                                 <span class="omb_spanOr">or</span>
                             </div>
